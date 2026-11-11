@@ -1,0 +1,1555 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>内蒙古干部网络学院官网 - 干部在线学习与专题课程平台</title>
+  <meta name="description" content="内蒙古干部网络学院官网汇聚干部在线学习课程、专题班次、政策解读与地方实践案例。提供处级干部进修、乡村振兴专题、生态文明建设等学习条目，适合党政干部与基层管理者选学参考。">
+  <meta name="keywords" content="内蒙古干部网络学院官网">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231a4d3e'/%3E%3Cpath d='M8 20 L16 8 L24 20 M12 16 L20 16' stroke='%23d9b45b' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --primary: #1a4d3e;
+      --primary-light: #2b6b57;
+      --primary-dark: #0f3328;
+      --gold: #b88e3c;
+      --gold-light: #d9b45b;
+      --bg: #f5f3ee;
+      --surface: #ffffff;
+      --text-primary: #1e2a26;
+      --text-secondary: #4e5f58;
+      --text-tertiary: #7d8e86;
+      --border: #dcd8ce;
+      --radius-card: 12px;
+      --radius-btn: 8px;
+      --radius-tag: 6px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 120px; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    ul, ol { list-style: none; }
+
+    /* 吸顶公告条 */
+    .announcement-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--primary-dark);
+      color: #e8e4da;
+      font-size: 13px;
+      padding: 6px 0;
+      overflow: hidden;
+    }
+    .announcement-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .announcement-brand {
+      font-weight: 600;
+      color: var(--gold-light);
+      white-space: nowrap;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      border-right: 1px solid rgba(255,255,255,0.2);
+      padding-right: 16px;
+    }
+    .announcement-item { display: flex; align-items: center; gap: 8px; }
+    .announcement-date {
+      background: rgba(255,255,255,0.12);
+      padding: 1px 8px;
+      border-radius: 3px;
+      font-size: 11px;
+      color: var(--gold-light);
+      font-variant-numeric: tabular-nums;
+    }
+    .announcement-text { opacity: 0.9; }
+
+    /* 页头 */
+    .site-header {
+      position: sticky;
+      top: 30px;
+      z-index: 99;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 62px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      white-space: nowrap;
+    }
+    .brand svg { flex-shrink: 0; }
+    .main-nav { display: flex; gap: 2px; }
+    .main-nav a {
+      padding: 6px 14px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      border-radius: var(--radius-btn);
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+    }
+    .main-nav a:hover { background: #eef2ef; color: var(--primary); }
+    .header-actions { display: flex; gap: 10px; align-items: center; }
+    .search-box {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 4px 14px;
+      background: var(--surface);
+      transition: border-color 0.15s;
+    }
+    .search-box:focus-within { border-color: var(--primary-light); }
+    .search-box input {
+      border: none;
+      outline: none;
+      font-size: 13px;
+      width: 140px;
+      background: transparent;
+      color: var(--text-primary);
+      font-family: inherit;
+    }
+    .search-box input::placeholder { color: var(--text-tertiary); }
+    .search-box button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      padding: 2px;
+      color: var(--text-tertiary);
+      display: flex;
+      align-items: center;
+    }
+    .hamburger {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-btn);
+      padding: 6px 10px;
+      cursor: pointer;
+      font-size: 18px;
+      color: var(--text-primary);
+    }
+
+    /* 首屏 */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 55%, #2f5a4a 100%);
+      color: #f0ede6;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: -80px;
+      top: -120px;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(185,142,60,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 56px 24px 48px;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+    }
+    .hero-content h1 {
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+    .hero-sub {
+      font-size: 15px;
+      line-height: 1.9;
+      color: rgba(240,237,230,0.82);
+      max-width: 560px;
+      margin-bottom: 28px;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--gold);
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: var(--radius-btn);
+      font-size: 14px;
+      font-weight: 600;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: #a57a2e; transform: translateY(-1px); }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #f0ede6;
+      padding: 10px 24px;
+      border-radius: var(--radius-btn);
+      font-size: 14px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .btn-outline:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.6); }
+
+    .hero-visual { display: flex; justify-content: center; align-items: center; }
+    .hero-visual svg { width: 100%; max-width: 360px; height: auto; }
+
+    /* 主内容区 - 三栏布局 */
+    .main-wrapper {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 32px 24px 48px;
+      display: grid;
+      grid-template-columns: 170px 1fr 240px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* 左频道栏 */
+    .channel-sidebar {
+      position: sticky;
+      top: 110px;
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
+      padding: 18px 0;
+      overflow: hidden;
+    }
+    .channel-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 0 18px 10px;
+    }
+    .channel-nav { display: flex; flex-direction: column; }
+    .channel-nav a {
+      padding: 8px 18px;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      border-left: 3px solid transparent;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .channel-nav a:hover, .channel-nav a.active {
+      background: #eef2ef;
+      color: var(--primary);
+      border-left-color: var(--primary);
+    }
+
+    /* 中间主内容 */
+    .main-content { display: flex; flex-direction: column; gap: 36px; }
+
+    /* 板块通用 */
+    .section { }
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .section-head h2 {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      letter-spacing: 0.3px;
+    }
+    .section-head .more-link {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+    }
+    .section-head .more-link:hover { color: var(--primary); }
+
+    /* 概览卡 */
+    .overview-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
+      padding: 28px 32px;
+      font-size: 14.5px;
+      line-height: 1.9;
+      color: var(--text-secondary);
+    }
+    .overview-card p + p { margin-top: 12px; }
+    .overview-card strong { color: var(--text-primary); font-weight: 600; }
+
+    /* 精选卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .course-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .course-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .course-card-img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      background: #e8ebe7;
+    }
+    .course-card-body { padding: 14px 16px 16px; flex: 1; display: flex; flex-direction: column; }
+    .course-card-body h3 {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      line-height: 1.45;
+    }
+    .course-card-body p {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 10px;
+    }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: var(--radius-tag);
+      background: #eef2ef;
+      color: var(--primary);
+      white-space: nowrap;
+    }
+    .tag.gold { background: #faf3e4; color: #8a6d2b; }
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11.5px;
+      color: var(--text-tertiary);
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid #f0ede6;
+    }
+
+    /* 最新更新列表 */
+    .update-list { display: flex; flex-direction: column; gap: 0; }
+    .update-item {
+      display: flex;
+      gap: 14px;
+      padding: 14px 16px;
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
+      align-items: flex-start;
+      transition: box-shadow 0.15s;
+    }
+    .update-item + .update-item { margin-top: 8px; }
+    .update-item:hover { box-shadow: var(--shadow-md); }
+    .update-date {
+      flex-shrink: 0;
+      font-size: 11px;
+      color: var(--text-tertiary);
+      background: #f0ede6;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-top: 2px;
+      font-variant-numeric: tabular-nums;
+    }
+    .update-body h4 { font-size: 13.5px; font-weight: 600; color: var(--text-primary); margin-bottom: 2px; }
+    .update-body p { font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .category-item {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
+      padding: 16px 12px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      transition: box-shadow 0.15s, background 0.15s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .category-item:hover { box-shadow: var(--shadow-md); background: #fafaf7; }
+    .category-item .cat-icon { font-size: 20px; line-height: 1; }
+    .category-item .cat-count { font-size: 11px; color: var(--text-tertiary); font-weight: 400; }
+
+    /* 深度解析 */
+    .deep-dive {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
+      padding: 32px 36px;
+    }
+    .deep-dive h2 { font-size: 21px; font-weight: 700; color: var(--primary-dark); margin-bottom: 20px; }
+    .deep-dive h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 24px 0 10px;
+      padding-left: 12px;
+      border-left: 3px solid var(--gold);
+    }
+    .deep-dive h3:first-of-type { margin-top: 0; }
+    .deep-dive p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.9;
+      margin-bottom: 12px;
+    }
+    .deep-dive ul {
+      margin: 8px 0 14px 20px;
+      list-style: disc;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    .deep-dive ul li { margin-bottom: 4px; }
+    .deep-dive .callout {
+      background: #f8f6f0;
+      border-left: 3px solid var(--gold);
+      padding: 14px 18px;
+      border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
+      font-size: 13px;
+      margin: 16px 0;
+      color: var(--text-secondary);
+    }
+
+    /* 体验指南步骤 */
+    .guide-steps { display: flex; flex-direction: column; gap: 12px; }
+    .step-item {
+      display: flex;
+      gap: 16px;
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
+      padding: 18px 20px;
+      align-items: flex-start;
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .step-body h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--text-primary); }
+    .step-body p { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 8px; }
+    details.faq-item {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+    details.faq-item summary {
+      padding: 14px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.15s;
+    }
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item summary::after {
+      content: '+';
+      font-size: 18px;
+      color: var(--text-tertiary);
+      font-weight: 400;
+      transition: transform 0.2s;
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+    details.faq-item[open] summary::after { content: '−'; }
+    details.faq-item summary:hover { background: #fafaf7; }
+    details.faq-item .faq-answer {
+      padding: 0 20px 16px;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      border-top: 1px solid #f0ede6;
+      padding-top: 12px;
+    }
+
+    /* 用户评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .comment-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
+      padding: 14px 16px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+    .comment-card .comment-user {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .comment-card .comment-user span { font-weight: 400; color: var(--text-tertiary); font-size: 11px; }
+
+    /* 相关资讯 */
+    .news-list { display: flex; flex-direction: column; gap: 10px; }
+    .news-item {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
+      padding: 14px 18px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      transition: box-shadow 0.15s;
+    }
+    .news-item:hover { box-shadow: var(--shadow-md); }
+    .news-date-badge {
+      flex-shrink: 0;
+      text-align: center;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 11px;
+      line-height: 1.4;
+      min-width: 52px;
+    }
+    .news-date-badge strong { display: block; font-size: 15px; }
+    .news-body h4 { font-size: 13.5px; font-weight: 600; margin-bottom: 3px; color: var(--text-primary); }
+    .news-body p { font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; }
+
+    /* 相关推荐标签 */
+    .tag-index { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag-index a {
+      display: inline-block;
+      padding: 6px 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+    }
+    .tag-index a:hover { border-color: var(--primary); color: var(--primary); background: #f4f8f5; }
+
+    /* 榜单 */
+    .rank-list { display: flex; flex-direction: column; gap: 6px; }
+    .rank-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
+      padding: 10px 16px;
+    }
+    .rank-num {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      background: #eef2ef;
+      color: var(--text-tertiary);
+    }
+    .rank-num.top { background: var(--gold); color: #fff; }
+    .rank-body { flex: 1; }
+    .rank-body h4 { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+    .rank-body p { font-size: 11.5px; color: var(--text-tertiary); }
+    .rank-score { font-size: 12px; font-weight: 700; color: var(--gold); font-variant-numeric: tabular-nums; }
+
+    /* 互动投稿 */
+    .interact-panel {
+      background: linear-gradient(135deg, #f8f6f0, #f0ede6);
+      border-radius: var(--radius-card);
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      border: 1px solid var(--border);
+    }
+    .interact-panel h3 { font-size: 16px; font-weight: 700; color: var(--primary-dark); margin-bottom: 4px; }
+    .interact-panel p { font-size: 13px; color: var(--text-secondary); }
+
+    /* 右侧辅助栏 */
+    .aux-sidebar { position: sticky; top: 110px; display: flex; flex-direction: column; gap: 20px; }
+    .aux-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
+      padding: 18px 16px;
+    }
+    .aux-card h3 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #f0ede6;
+    }
+    .aux-list { display: flex; flex-direction: column; gap: 10px; }
+    .aux-list-item { font-size: 13px; line-height: 1.5; }
+    .aux-list-item a { color: var(--text-secondary); transition: color 0.15s; }
+    .aux-list-item a:hover { color: var(--primary); }
+    .aux-list-item .aux-meta { display: block; font-size: 11px; color: var(--text-tertiary); margin-top: 2px; }
+
+    .update-stream .stream-item {
+      display: flex;
+      gap: 8px;
+      font-size: 12.5px;
+      line-height: 1.5;
+      padding: 6px 0;
+      border-bottom: 1px dashed #f0ede6;
+    }
+    .update-stream .stream-item:last-child { border-bottom: none; }
+    .stream-date { color: var(--text-tertiary); white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+    /* 页尾 */
+    .site-footer {
+      background: var(--primary-dark);
+      color: #c8cfc9;
+      margin-top: 40px;
+    }
+    .footer-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 40px 24px 28px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 32px;
+    }
+    .footer-brand { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+    .footer-desc { font-size: 13px; line-height: 1.8; color: rgba(200,207,201,0.8); }
+    .footer-col h4 { font-size: 13px; font-weight: 700; color: var(--gold-light); margin-bottom: 12px; }
+    .footer-col a {
+      display: block;
+      font-size: 12.5px;
+      color: rgba(200,207,201,0.75);
+      padding: 3px 0;
+      transition: color 0.15s;
+    }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 16px 24px 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 11.5px;
+      color: rgba(200,207,201,0.55);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* 回到顶部 */
+    .back-top {
+      position: fixed;
+      right: 24px;
+      bottom: 28px;
+      z-index: 90;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s, transform 0.2s;
+    }
+    .back-top.visible { opacity: 1; pointer-events: auto; }
+    .back-top:hover { transform: translateY(-3px); }
+
+    /* 移动端遮罩 */
+    .nav-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 95;
+    }
+    .nav-overlay.active { display: block; }
+
+    /* 响应式 */
+    @media (max-width: 1024px) {
+      .main-wrapper { grid-template-columns: 1fr 240px; }
+      .channel-sidebar { display: none; }
+      .main-nav { display: none; }
+      .hamburger { display: block; }
+      .hero-inner { grid-template-columns: 1fr; gap: 28px; }
+      .hero-visual { display: none; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 740px) {
+      .main-wrapper { grid-template-columns: 1fr; padding: 20px 16px 32px; gap: 28px; }
+      .aux-sidebar { position: static; }
+      .hero-inner { padding: 36px 16px 32px; }
+      .hero-content h1 { font-size: 26px; }
+      .hero-sub { font-size: 14px; }
+      .card-grid { grid-template-columns: 1fr; }
+      .comment-grid { grid-template-columns: 1fr; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .deep-dive { padding: 22px 18px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 24px; }
+      .header-inner { padding: 0 16px; height: 56px; }
+      .brand { font-size: 15px; }
+      .search-box input { width: 100px; }
+      .announcement-inner { padding: 0 16px; gap: 10px; font-size: 11px; }
+      .announcement-brand { display: none; }
+      .main-nav.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 260px;
+        height: 100vh;
+        background: var(--surface);
+        z-index: 100;
+        padding: 70px 16px 24px;
+        box-shadow: -4px 0 20px rgba(0,0,0,0.12);
+        gap: 4px;
+        overflow-y: auto;
+      }
+      .main-nav.open a { padding: 12px 16px; font-size: 15px; border-bottom: 1px solid #f0ede6; }
+      .interact-panel { flex-direction: column; align-items: flex-start; }
+      .back-top { right: 16px; bottom: 16px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+      html { scroll-behavior: auto; }
+    }
+
+    .no-result {
+      padding: 20px;
+      text-align: center;
+      color: var(--text-tertiary);
+      font-size: 14px;
+      display: none;
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 吸顶公告条 -->
+  <div class="announcement-bar" id="announcement">
+    <div class="announcement-inner">
+      <span class="announcement-brand">内蒙古干部网络学院官网</span>
+      <div class="announcement-item">
+        <span class="announcement-date">2026-11-06</span>
+        <span class="announcement-text">“二十届三中全会精神解读”专题班新增3门课程</span>
+      </div>
+      <div class="announcement-item">
+        <span class="announcement-date">2026-11-04</span>
+        <span class="announcement-text">处级干部任职培训班线上课程包更新至28讲</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 页头 -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="/#top" class="brand" aria-label="内蒙古干部网络学院官网首页">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#1a4d3e"/>
+          <path d="M8 20 L16 8 L24 20 M12 16 L20 16" stroke="#d9b45b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        </svg>
+        内蒙古干部网络学院官网
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="主导航">
+        <a href="/#overview">学院概况</a>
+        <a href="/#featured">精品课程</a>
+        <a href="/#updates">学习动态</a>
+        <a href="/#categories">培训专题</a>
+        <a href="/#deepdive">政策解读</a>
+        <a href="/#guide">选学指南</a>
+        <a href="/#faq">常见问题</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-box">
+          <input type="search" id="searchInput" placeholder="搜索课程/专题" aria-label="站内搜索">
+          <button type="button" id="searchBtn" aria-label="搜索">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+          </button>
+        </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="打开菜单" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- 首屏 -->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <h1>内蒙古干部网络学院官网</h1>
+        <p class="hero-sub">汇集处级干部进修、乡村振兴专题、生态文明建设、铸牢中华民族共同体意识等在线学习条目，提供课程包、政策解读与地方实践案例，面向全区党政干部与基层管理者。</p>
+        <div class="hero-actions">
+          <a href="/#featured" class="btn-primary">进入课程库 →</a>
+          <a href="/#updates" class="btn-outline">查看本周更新</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 360 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="180" cy="140" r="110" stroke="rgba(217,180,91,0.18)" stroke-width="1.5"/>
+          <circle cx="180" cy="140" r="80" stroke="rgba(217,180,91,0.12)" stroke-width="1"/>
+          <rect x="60" y="60" width="100" height="70" rx="8" fill="rgba(255,255,255,0.06)" stroke="rgba(217,180,91,0.3)" stroke-width="1"/>
+          <rect x="200" y="90" width="90" height="60" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(217,180,91,0.2)" stroke-width="1"/>
+          <rect x="100" y="160" width="140" height="80" rx="8" fill="rgba(217,180,91,0.08)" stroke="rgba(217,180,91,0.35)" stroke-width="1.2"/>
+          <line x1="120" y1="185" x2="220" y2="185" stroke="rgba(217,180,91,0.5)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="120" y1="200" x2="190" y2="200" stroke="rgba(217,180,91,0.3)" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="120" y1="215" x2="170" y2="215" stroke="rgba(217,180,91,0.2)" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="80" cy="75" r="4" fill="rgba(217,180,91,0.5)"/>
+          <circle cx="250" cy="110" r="3" fill="rgba(217,180,91,0.4)"/>
+          <circle cx="220" cy="180" r="2.5" fill="rgba(217,180,91,0.3)"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主内容区：三栏布局 -->
+  <div class="main-wrapper">
+
+    <!-- 左频道栏 -->
+    <aside class="channel-sidebar" aria-label="频道导航">
+      <div class="channel-title">学习频道</div>
+      <nav class="channel-nav">
+        <a href="/#overview" class="active">学院概况</a>
+        <a href="/#featured">精品课程</a>
+        <a href="/#updates">学习动态</a>
+        <a href="/#categories">培训专题</a>
+        <a href="/#deepdive">政策解读</a>
+        <a href="/#guide">选学指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">学员反馈</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#recommend">推荐方向</a>
+        <a href="/#ranking">热门榜单</a>
+        <a href="/#interact">投稿互动</a>
+      </nav>
+    </aside>
+
+    <!-- 中间主内容 -->
+    <main class="main-content" id="mainContent">
+
+      <!-- 板块1：主题领域概览 -->
+      <section class="section" id="overview">
+        <div class="section-head">
+          <h2>干部在线学习领域概览</h2>
+        </div>
+        <div class="overview-card">
+          <p><strong>干部网络培训</strong>覆盖理论教育、党性修养、专业化能力与知识更新四大方向。理论教育以习近平新时代中国特色社会主义思想课程为核心，包含“中国式现代化”“新质生产力与内蒙古实践”等专题；党性修养板块设有党风廉政建设案例课、红色教育基地线上导览；专业化能力按经济、生态、民族、法治等领域细分，其中“铸牢中华民族共同体意识”专题在2026年秋季学期新增6个教学案例。</p>
+          <p>从学习形式看，专题班采用“必修课+选修课+在线研讨”组合，单期时长在2至6周之间。处级干部进修班要求完成不少于32学时的线上课程，其中“二十届三中全会精神解读”系列占8学时。乡村振兴专题班则偏重案例教学，赤峰市喀喇沁旗的马鞍山村实践、巴彦淖尔市五原县的盐碱地改良案例均被收录为教学素材。学习数据方面，2026年10月全区干部在线学习人均完成18.6学时，较9月上升2.3学时。</p>
+          <p>值得关注的具体条目包括：自治区党委组织部10月15日上线的“办好两件大事”专题课，包含6讲视频与3份政策原文；内蒙古党校录制的“防沙治沙与光伏治沙”案例课，以库布其沙漠治理为样本；以及面向基层干部的“苏木乡镇履职事项清单”解读微课，单集12分钟，适合碎片时间学习。</p>
+        </div>
+      </section>
+
+      <!-- 板块2：精选内容推荐 -->
+      <section class="section" id="featured">
+        <div class="section-head">
+          <h2>重点课程与专题班推荐</h2>
+          <a href="/#categories" class="more-link">按分类浏览 →</a>
+        </div>
+        <div class="card-grid">
+          <article class="course-card">
+            <img class="course-card-img" src="https://picsum.photos/seed/nmgyj01/400/300" width="400" height="300" alt="二十届三中全会精神解读课程封面" loading="lazy">
+            <div class="course-card-body">
+              <h3>二十届三中全会精神解读（12讲）</h3>
+              <p>由自治区党校经济学教研部录制，逐条拆解《决定》中涉及内蒙古的7项改革任务，每讲配发1份政策原文对照表。</p>
+              <div class="tag-row"><span class="tag">理论教育</span><span class="tag gold">必修</span><span class="tag">政策解读</span></div>
+              <div class="card-meta"><span>学习人数 3,842</span><span>评分 4.8</span></div>
+            </div>
+          </article>
+          <article class="course-card">
+            <img class="course-card-img" src="https://picsum.photos/seed/nmgyj02/400/300" width="400" height="300" alt="库布其沙漠光伏治沙案例课封面" loading="lazy">
+            <div class="course-card-body">
+              <h3>库布其光伏治沙模式案例课</h3>
+              <p>以达拉特旗光伏领跑者基地为样本，拆解“板上发电、板下种植、板间养殖”的收益结构，含2025年发电量与植被覆盖率数据。</p>
+              <div class="tag-row"><span class="tag">生态文明</span><span class="tag">案例教学</span><span class="tag gold">选修</span></div>
+              <div class="card-meta"><span>学习人数 2,176</span><span>评分 4.7</span></div>
+            </div>
+          </article>
+          <article class="course-card">
+            <img class="course-card-img" src="https://picsum.photos/seed/nmgyj03/400/300" width="400" height="300" alt="铸牢中华民族共同体意识专题课程封面" loading="lazy">
+            <div class="course-card-body">
+              <h3>铸牢中华民族共同体意识专题班</h3>
+              <p>含6个教学案例，覆盖呼和浩特市玉泉区清泉街社区互嵌式社区建设、呼伦贝尔市鄂温克族自治旗民族团结进步创建等实践。</p>
+              <div class="tag-row"><span class="tag">民族工作</span><span class="tag">专题班</span><span class="tag gold">必修</span></div>
+              <div class="card-meta"><span>学习人数 5,109</span><span>评分 4.9</span></div>
+            </div>
+          </article>
+          <article class="course-card">
+            <img class="course-card-img" src="https://picsum.photos/seed/nmgyj04/400/300" width="400" height="300" alt="苏木乡镇履职事项清单解读微课封面" loading="lazy">
+            <div class="course-card-body">
+              <h3>苏木乡镇履职事项清单解读（8集微课）</h3>
+              <p>每集12分钟，逐项说明清单中152个事项的权责边界，重点标注“属地管理”与“配合事项”的区分依据，附常见误区问答。</p>
+              <div class="tag-row"><span class="tag">基层治理</span><span class="tag">微课</span><span class="tag">履职清单</span></div>
+              <div class="card-meta"><span>学习人数 1,893</span><span>评分 4.6</span></div>
+            </div>
+          </article>
+          <article class="course-card">
+            <img class="course-card-img" src="https://picsum.photos/seed/nmgyj05/400/300" width="400" height="300" alt="马鞍山村乡村振兴实践课程封面" loading="lazy">
+            <div class="course-card-body">
+              <h3>喀喇沁旗马鞍山村振兴实践</h3>
+              <p>以习近平总书记考察过的马鞍山村为对象，记录2020至2025年林下经济与乡村旅游的收入变化，附带村集体经济账本结构。</p>
+              <div class="tag-row"><span class="tag">乡村振兴</span><span class="tag">案例教学</span><span class="tag gold">选修</span></div>
+              <div class="card-meta"><span>学习人数 2,554</span><span>评分 4.7</span></div>
+            </div>
+          </article>
+          <article class="course-card">
+            <img class="course-card-img" src="https://picsum.photos/seed/nmgyj06/400/300" width="400" height="300" alt="基层干部压力管理与心理调适课程封面" loading="lazy">
+            <div class="course-card-body">
+              <h3>基层干部压力管理与心理调适</h3>
+              <p>由内蒙古医科大学附属医院心理科参与录制，含4种压力自评量表的解读方式，以及12个苏木乡镇干部的真实调节案例。</p>
+              <div class="tag-row"><span class="tag">知识更新</span><span class="tag">心理健康</span><span class="tag">互动课</span></div>
+              <div class="card-meta"><span>学习人数 976</span><span>评分 4.5</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 板块3：最新更新 -->
+      <section class="section" id="updates">
+        <div class="section-head">
+          <h2>本周课程与专题更新</h2>
+          <span style="font-size:12px;color:var(--text-tertiary)">截至 2026-11-08</span>
+        </div>
+        <div class="update-list">
+          <div class="update-item">
+            <span class="update-date">11-07</span>
+            <div class="update-body">
+              <h4>“新质生产力与内蒙古产业转型”新增第9讲</h4>
+              <p>聚焦呼和浩特市乳业大数据平台与包头市稀土新材料产业园的数字化改造，含两家企业的用工结构对比表。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-date">11-06</span>
+            <div class="update-body">
+              <h4>处级干部任职培训班线上课程包更新至28讲</h4>
+              <p>新增“重大行政决策程序暂行条例”实操解析，由自治区司法厅行政复议处提供3个真实纠错案例。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-date">11-05</span>
+            <div class="update-body">
+              <h4>“防沙治沙与光伏治沙”案例课上线</h4>
+              <p>以库布其沙漠为样本，含2025年治沙面积与光伏板清洗用水量数据，配套4份治沙合同模板。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-date">11-04</span>
+            <div class="update-body">
+              <h4>“办好两件大事”专题课新增互动研讨室</h4>
+              <p>每周三19:00开放线上研讨，11月4日首场由兴安盟委党校教师主持，主题为“农畜产品生产基地建设”。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-date">11-03</span>
+            <div class="update-body">
+              <h4>苏木乡镇履职清单微课上线8集全</h4>
+              <p>第7、8集分别讲解“林长制”与“河湖长制”在苏木乡镇的职责承接，附自治区林草局2025年考核指标。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-date">11-02</span>
+            <div class="update-body">
+              <h4>“铸牢中华民族共同体意识”案例更新</h4>
+              <p>新增阿拉善盟额济纳旗东风镇“航天+民族团结”案例，含2025年航天旅游收入与当地牧民参与比例。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-date">11-01</span>
+            <div class="update-body">
+              <h4>2026年秋季学期在线考试范围公布</h4>
+              <p>覆盖必修课12门、选修课8门，考试窗口期为11月15日至12月5日，补考安排在12月12日。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-date">10-30</span>
+            <div class="update-body">
+              <h4>“基层干部压力管理”新增音频版</h4>
+              <p>6段音频总时长58分钟，适合通勤收听，内容与视频课一致，增加3个睡前放松练习。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 板块4：分类入口 -->
+      <section class="section" id="categories">
+        <div class="section-head">
+          <h2>培训专题分类入口</h2>
+        </div>
+        <div class="category-grid">
+          <a href="/#featured" class="category-item"><span class="cat-icon">📘</span>理论教育<span class="cat-count">86门课程</span></a>
+          <a href="/#featured" class="category-item"><span class="cat-icon">🏛️</span>党性修养<span class="cat-count">42门课程</span></a>
+          <a href="/#featured" class="category-item"><span class="cat-icon">🌾</span>乡村振兴<span class="cat-count">37门课程</span></a>
+          <a href="/#featured" class="category-item"><span class="cat-icon">🌿</span>生态文明<span class="cat-count">29门课程</span></a>
+          <a href="/#featured" class="category-item"><span class="cat-icon">🤝</span>民族工作<span class="cat-count">24门课程</span></a>
+          <a href="/#featured" class="category-item"><span class="cat-icon">⚖️</span>法治政府<span class="cat-count">18门课程</span></a>
+          <a href="/#featured" class="category-item"><span class="cat-icon">🏘️</span>基层治理<span class="cat-count">31门课程</span></a>
+          <a href="/#featured" class="category-item"><span class="cat-icon">💡</span>知识更新<span class="cat-count">53门课程</span></a>
+        </div>
+      </section>
+
+      <!-- 板块5：深度解析 -->
+      <section class="section" id="deepdive">
+        <div class="deep-dive">
+          <h2>专题班课程结构拆解与选学判断</h2>
+          <p>干部网络培训的课程包看似同质，实际在学时要求、考核方式与案例来源上差异明显。以2026年秋季学期正在开设的四个专题班为样本，可以拆出几组可核对的结构差异。</p>
+
+          <h3>必修学时与选修学时的比例差异</h3>
+          <p>处级干部进修班要求32学时，其中必修24学时、选修8学时；乡村振兴专题班总学时24，必修与选修各占12。两班必修学时差出12个学时，直接来自“二十届三中全会精神解读”系列是否列为必学。前者将12讲全部列入必修，后者仅要求完成前6讲。从学员反馈看，巴彦淖尔市一位乡镇党委书记在10月28日的线下座谈中提到，“后6讲讲的是金融体制改革，跟种养殖关系不大，选修里挑着看更实用”。这条意见被自治区党委组织部干教处收录进11月4日的课程优化备忘录。</p>
+
+          <h3>案例教学的取材范围与时效</h3>
+          <p>库布其光伏治沙案例课的素材截止到2025年12月，数据来自达拉特旗能源局年度报表；马鞍山村案例则更新至2026年6月，包含当年五一假期旅游收入147万元的数字。两者时效差半年，原因在于治沙项目的发电数据需等年度统计，而乡村旅游收入按月可查。判断一个案例课是否值得投入时间，先看它的数据截止日期，再看配套文件是否包含原始台账或合同模板。带模板的案例课，完成一个案例平均需45分钟；纯视频讲解的，22分钟即可刷完，但后续研讨环节往往要求提交分析报告，时间成本反而更高。</p>
+
+          <h3>线上研讨与线下考核的衔接方式</h3>
+          <p>“办好两件大事”专题课设置了每周三19:00的线上研讨室，每场限额30人，需提前在课程页预约。研讨表现按发言记录自动生成参与度评分，占该专题总评的20%。剩余80%来自在线考试，考试题型为20道单选加2道案例分析。案例分析题从题库随机抽取，2026年秋季学期题库共14道，其中6道与“农畜产品生产基地建设”相关。呼和浩特市一位参与命题的党校教师透露，案例分析评分标准分三档，最看重是否引用课程中的具体数据，空谈政策原则的答卷通常落在第三档。</p>
+
+          <div class="callout">选学判断可拆成三个可核对项：①课程页是否标注数据截止日期；②配套文件有无原始台账、合同模板或政策原文对照表；③考核方式中案例分析占比是否超过50%。三项中满足两项的课程，完成后的知识留存率在学员回访中明显更高；三项均不满足的，多数人一周后仅记得标题。</div>
+
+          <h3>不同层级干部的选课侧重</h3>
+          <p>处级干部进修班的选课数据显示，10月完成学时最多的前三个方向是“理论教育”“生态文明”“基层治理”；而苏木乡镇干部的选课集中在“乡村振兴”“履职清单”“压力管理”。这一差异与岗位考核指标直接相关——旗县以上干部年度考核含理论学习分值，乡镇干部则侧重实务操作。阿拉善盟一位组织部分管干教的副部长在10月31日的全区干教工作推进会上提到，2027年春季学期拟将“防沙治沙”列为阿拉善、鄂尔多斯、巴彦淖尔三地乡镇干部的必修模块，学时初步定为6个。</p>
+        </div>
+      </section>
+
+      <!-- 板块6：体验指南 -->
+      <section class="section" id="guide">
+        <div class="section-head">
+          <h2>在线选学与时间投入判断路径</h2>
+        </div>
+        <div class="guide-steps">
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h4>先确认本期必修清单</h4>
+              <p>每学期开学第一周，所在单位组织人事部门会下发必修课目录。2026年秋季学期全区统一的必修课共12门，其中“二十届三中全会精神解读”占8学时，“铸牢中华民族共同体意识”占6学时。先锁定这些，再安排选修。</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h4>按数据截止日期筛选案例课</h4>
+              <p>课程详情页底部标注“数据截至”的，优先选截止日期在2026年6月之后的。未标注的可通过配套文件判断——附有2026年台账或合同模板的，素材较新；只有政策原文没有执行数据的，多为通识课。</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h4>比较同类课程的单学时信息密度</h4>
+              <p>两门课都讲乡村振兴时，数一下各自包含的本地案例个数。马鞍山村案例课45分钟讲透1个村的收支结构；另一门“乡村振兴战略概论”120分钟覆盖8个盟市概况，单案例平均15分钟。需要深度参照的选前者，需要面上了解的选后者。</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <h4>评估研讨与考试的时间成本</h4>
+              <p>带线上研讨的专题班，每周需额外投入1.5小时（含预约和发言）。案例分析题占分超过50%的考试，通常需要预留2小时整理课程中的数据点。如果当周有迎检或防汛任务，优先选纯视频加客观题的课程包。</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">5</div>
+            <div class="step-body">
+              <h4>用结业报告倒推学习重点</h4>
+              <p>多数专题班要求提交1500字结业报告。翻阅近三期优秀报告可以发现，得分高的普遍引用了3个以上课程配套文件中的具体条款或数字。选课时优先选提供政策原文对照表、台账模板的课程，写报告时能直接取用。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 板块7：FAQ -->
+      <section class="section" id="faq">
+        <div class="section-head">
+          <h2>学员常见问题</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>处级干部进修班线上课程最少要完成多少学时？</summary>
+            <div class="faq-answer">2026年秋季学期要求32学时，其中必修24学时、选修8学时。必修部分由“二十届三中全会精神解读”（8学时）、“铸牢中华民族共同体意识”（6学时）、“党性修养与廉政建设”（6学时）及“专业化能力”（4学时）构成。学时统计以视频播放完成度90%以上为准，拖动进度条不计入。</div>
+          </details>
+          <details class="faq-item">
+            <summary>“铸牢中华民族共同体意识”专题班的6个案例分别讲哪里？</summary>
+            <div class="faq-answer">6个案例分别取自呼和浩特市玉泉区清泉街社区（互嵌式社区）、呼伦贝尔市鄂温克族自治旗（民族团结进步创建）、阿拉善盟额济纳旗东风镇（航天+民族团结）、兴安盟科尔沁右翼前旗（京蒙协作中的民族交往）、锡林郭勒盟苏尼特右旗（乌兰牧骑基层服务）、乌海市海勃湾区（城市少数民族流动人口服务）。每个案例配发一份当地2025年工作总结节选。</div>
+          </details>
+          <details class="faq-item">
+            <summary>库布其光伏治沙案例课的数据截止到什么时候？</summary>
+            <div class="faq-answer">课程页面标注“数据截至2025年12月”。发电量与植被覆盖率数据来自达拉特旗能源局2025年度报表；2026年上半年的数据尚未纳入，讲师在课程末尾说明会在2027年春季学期更新版本。配套的4份治沙合同模板更新至2026年3月。</div>
+          </details>
+          <details class="faq-item">
+            <summary>线上研讨缺席会影响结业吗？</summary>
+            <div class="faq-answer">“办好两件大事”专题课的研讨参与度占总评20%。缺席单次不扣分，但整期缺席超过3次（共6次）该项计零分。如有公务冲突，可观看研讨回放并在讨论区补交300字以上发言，经班主任确认后可计50%参与度。回放保留至课程结束后7天。</div>
+          </details>
+          <details class="faq-item">
+            <summary>苏木乡镇履职事项清单微课在哪几集讲林长制？</summary>
+            <div class="faq-answer">第7集专门讲林长制在苏木乡镇的职责承接，时长14分钟。内容包括：乡镇林长与村级林长的责任划分、2025年自治区林草局考核指标中涉及乡镇的3项硬指标、以及“林长+检察长”协作机制在赤峰市敖汉旗的试行情况。第8集讲河湖长制，两集可单独观看。</div>
+          </details>
+          <details class="faq-item">
+            <summary>在线考试的案例分析题怎么评分？</summary>
+            <div class="faq-answer">评分分三档：第一档（18—20分）准确引用课程中的具体数据或政策条款，并结合本地实际提出可操作建议；第二档（12—17分）有分析框架但数据引用少于2处；第三档（11分以下）仅复述政策原则，无课程内容支撑。2026年秋季学期题库共14道案例分析题，其中6道与农畜产品生产基地建设相关。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 板块8：用户评论 -->
+      <section class="section" id="comments">
+        <div class="section-head">
+          <h2>学员留言与课程反馈</h2>
+        </div>
+        <div class="comment-grid">
+          <div class="comment-card"><div class="comment-user">北疆小禾 <span>11-07</span></div>马鞍山村那个案例课确实做得好，村集体账本结构直接截屏放出来了，比听十遍“发展集体经济”管用。</div>
+          <div class="comment-card"><div class="comment-user">风从草原来 <span>11-06</span></div>处级班32学时不算多，但研讨预约太难抢了，30个名额放出来五分钟就没了。</div>
+          <div class="comment-card"><div class="comment-user">敕勒川上 <span>11-06</span></div>库布其光伏课数据只到2025年底，有点旧了，不过合同模板很实用，直接改了改就用在我们苏木的项目里了。</div>
+          <div class="comment-card"><div class="comment-user">黄河几字弯 <span>11-05</span></div>压力管理那门课的音频版不错，通勤路上听完了，比视频省眼睛。</div>
+          <div class="comment-card"><div class="comment-user">青城小吏 <span>11-05</span></div>履职清单第7集讲林长制，把我们乡镇跟旗林草局的扯皮点说清楚了，建议加个文字版，视频来回拉进度条太麻烦。</div>
+          <div class="comment-card"><div class="comment-user">兴安岭下 <span>11-04</span></div>铸牢专题的6个案例里，额济纳那个航天旅游的数据有点意思，但跟民族团结的关联讲得稍微牵强。</div>
+          <div class="comment-card"><div class="comment-user">乌兰察布风大 <span>11-04</span></div>案例分析题评分标准能不能公开？每次考完不知道第三档到底差在哪。</div>
+          <div class="comment-card"><div class="comment-user">锡林郭勒的羊 <span>11-03</span></div>乡村振兴班24学时，12必修12选修，比处级班轻松点，但结业报告一样要1500字。</div>
+          <div class="comment-card"><div class="comment-user">河套平原 <span>11-03</span></div>“办好两件大事”研讨室11月4日那场讲农畜产品基地，主持老师是兴安盟党校的，案例用的科右前旗，还行。</div>
+          <div class="comment-card"><div class="comment-user">大漠孤烟 <span>11-02</span></div>建议把防沙治沙课加进阿拉善乡镇干部的必修，我们这边光伏板清洗用水量那个数据很有参考价值。</div>
+          <div class="comment-card"><div class="comment-user">呼伦贝尔雪 <span>11-02</span></div>额济纳东风镇那个案例，航天旅游收入是2025年的，今年胡杨节的数据还没放进去，等更新。</div>
+          <div class="comment-card"><div class="comment-user">包头钢城 <span>11-01</span></div>稀土新材料产业园的用工结构对比表做得细，但只截了乳业和稀土两个行业，化工的没放。</div>
+          <div class="comment-card"><div class="comment-user">乌海湖边 <span>10-31</span></div>线上考试补考安排在12月12日，跟年底考核撞了，能不能提前一周？</div>
+          <div class="comment-card"><div class="comment-user">赤峰对夹 <span>10-30</span></div>敖汉旗“林长+检察长”那个协作机制，我们旗里也在推，课件里就一句话带过，有点可惜。</div>
+          <div class="comment-card"><div class="comment-user">阿拉善驼铃 <span>10-30</span></div>压力自评量表测出来轻度焦虑，不知道准不准，但课里给的呼吸练习照着做了两天，有点用。</div>
+          <div class="comment-card"><div class="comment-user">鄂尔多斯暖城 <span>10-29</span></div>光伏治沙课里发电量和植被覆盖率放一张表对比，看得很清楚，比单独讲治沙强。</div>
+        </div>
+      </section>
+
+      <!-- 板块9：相关资讯 -->
+      <section class="section" id="news">
+        <div class="section-head">
+          <h2>近期干教动态与课程通知</h2>
+        </div>
+        <div class="news-list">
+          <div class="news-item">
+            <div class="news-date-badge"><strong>11-06</strong>2026</div>
+            <div class="news-body">
+              <h4>全区干部在线学习10月人均完成18.6学时</h4>
+              <p>自治区党委组织部干教处11月6日通报，较9月上升2.3学时，其中兴安盟、乌海市完成率超过92%。未完成名单已下发各盟市委组织部。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date-badge"><strong>11-05</strong>2026</div>
+            <div class="news-body">
+              <h4>“防沙治沙与光伏治沙”案例课上线首日学习破千</h4>
+              <p>11月5日上线当天，选学人数达到1,047人，阿拉善盟、鄂尔多斯市学员占63%。课程配套的4份治沙合同模板下载量达326次。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date-badge"><strong>11-04</strong>2026</div>
+            <div class="news-body">
+              <h4>“办好两件大事”专题课首场线上研讨举行</h4>
+              <p>11月4日19:00首场研讨，30个名额全部约满，实际到会28人。兴安盟委党校教师主持，讨论记录已上传课程资料区。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date-badge"><strong>11-02</strong>2026</div>
+            <div class="news-body">
+              <h4>额济纳旗东风镇“航天+民族团结”案例入选课程库</h4>
+              <p>该案例包含2025年航天旅游收入1,240万元、当地牧民参与旅游经营户数47户等数据，11月2日完成课程录制。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date-badge"><strong>10-30</strong>2026</div>
+            <div class="news-body">
+              <h4>2026年秋季学期在线考试题库完成扩充</h4>
+              <p>案例分析题由10道增至14道，新增4道均涉及“农畜产品生产基地建设”，11月15日考试窗口期启用新题库。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date-badge"><strong>10-28</strong>2026</div>
+            <div class="news-body">
+              <h4>巴彦淖尔市乡镇干部座谈反馈课程优化建议</h4>
+              <p>10月28日座谈中，12位乡镇党委书记提出“减少金融体制改革必修内容”等7条建议，干教处已收录进11月4日备忘录。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 板块10：相关推荐 -->
+      <section class="section" id="recommend">
+        <div class="section-head">
+          <h2>延伸学习方向与条目</h2>
+        </div>
+        <div class="tag-index">
+          <a href="/#featured">二十届三中全会精神解读</a>
+          <a href="/#featured">库布其光伏治沙模式</a>
+          <a href="/#featured">马鞍山村集体经济账本</a>
+          <a href="/#featured">苏木乡镇履职事项清单</a>
+          <a href="/#featured">铸牢中华民族共同体意识案例</a>
+          <a href="/#featured">基层干部压力自评量表</a>
+          <a href="/#featured">新质生产力与乳业大数据</a>
+          <a href="/#featured">额济纳航天旅游与民族团结</a>
+        </div>
+      </section>
+
+      <!-- 板块11：热门榜单 -->
+      <section class="section" id="ranking">
+        <div class="section-head">
+          <h2>本周学习热度榜</h2>
+          <span style="font-size:12px;color:var(--text-tertiary)">按11月1日—7日选学人数排序</span>
+        </div>
+        <div class="rank-list">
+          <div class="rank-item"><span class="rank-num top">1</span><div class="rank-body"><h4>二十届三中全会精神解读（12讲）</h4><p>选学人数 3,842 · 必修</p></div><span class="rank-score">4.8</span></div>
+          <div class="rank-item"><span class="rank-num top">2</span><div class="rank-body"><h4>铸牢中华民族共同体意识专题班</h4><p>选学人数 5,109 · 必修</p></div><span class="rank-score">4.9</span></div>
+          <div class="rank-item"><span class="rank-num top">3</span><div class="rank-body"><h4>库布其光伏治沙模式案例课</h4><p>选学人数 2,176 · 选修</p></div><span class="rank-score">4.7</span></div>
+          <div class="rank-item"><span class="rank-num">4</span><div class="rank-body"><h4>喀喇沁旗马鞍山村振兴实践</h4><p>选学人数 2,554 · 选修</p></div><span class="rank-score">4.7</span></div>
+          <div class="rank-item"><span class="rank-num">5</span><div class="rank-body"><h4>苏木乡镇履职事项清单解读（8集）</h4><p>选学人数 1,893 · 选修</p></div><span class="rank-score">4.6</span></div>
+        </div>
+      </section>
+
+      <!-- 板块12：投稿互动 -->
+      <section class="section" id="interact">
+        <div class="interact-panel">
+          <div>
+            <h3>案例征集与学习心得投稿</h3>
+            <p>面向全区干部征集本地实践案例、课程学习心得。2026年第四季度主题为“防沙治沙与光伏治沙的本地经验”，截稿日期12月10日。入选案例将纳入课程库并署名。</p>
+          </div>
+          <a href="/#interact" class="btn-primary">查看投稿要求 →</a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 右侧辅助栏 -->
+    <aside class="aux-sidebar" aria-label="辅助信息">
+      <div class="aux-card">
+        <h3>本周更新流</h3>
+        <div class="update-stream">
+          <div class="stream-item"><span class="stream-date">11-07</span><span>新质生产力第9讲上线</span></div>
+          <div class="stream-item"><span class="stream-date">11-06</span><span>处级班课程包更新至28讲</span></div>
+          <div class="stream-item"><span class="stream-date">11-05</span><span>光伏治沙案例课上线</span></div>
+          <div class="stream-item"><span class="stream-date">11-04</span><span>首场线上研讨室开放</span></div>
+          <div class="stream-item"><span class="stream-date">11-02</span><span>额济纳案例完成录制</span></div>
+        </div>
+      </div>
+      <div class="aux-card">
+        <h3>高频搜索条目</h3>
+        <div class="aux-list">
+          <div class="aux-list-item"><a href="/#featured">二十届三中全会解读</a><span class="aux-meta">必修 · 8学时</span></div>
+          <div class="aux-list-item"><a href="/#featured">光伏治沙合同模板</a><span class="aux-meta">配套文件 · 4份</span></div>
+          <div class="aux-list-item"><a href="/#featured">马鞍山村账本结构</a><span class="aux-meta">案例 · 45分钟</span></div>
+          <div class="aux-list-item"><a href="/#featured">乡镇林长制职责</a><span class="aux-meta">微课第7集</span></div>
+          <div class="aux-list-item"><a href="/#featured">压力自评量表</a><span class="aux-meta">4种量表</span></div>
+        </div>
+      </div>
+      <div class="aux-card">
+        <h3>近期考试节点</h3>
+        <div class="aux-list">
+          <div class="aux-list-item"><a href="/#faq">秋季学期在线考试</a><span class="aux-meta">11月15日—12月5日</span></div>
+          <div class="aux-list-item"><a href="/#faq">补考安排</a><span class="aux-meta">12月12日</span></div>
+          <div class="aux-list-item"><a href="/#faq">结业报告提交</a><span class="aux-meta">12月8日截止</span></div>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- 页尾 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">内蒙古干部网络学院官网</div>
+        <p class="footer-desc">覆盖2026年秋季学期在线的86门理论课程、42门党性修养课程及37门乡村振兴案例课，条目类型含视频课、微课、音频课与配套政策文件。每周四更新课程，每学期两次考核节点。</p>
+      </div>
+      <div class="footer-col">
+        <h4>学习频道</h4>
+        <a href="/#featured">精品课程</a>
+        <a href="/#updates">学习动态</a>
+        <a href="/#categories">培训专题</a>
+        <a href="/#ranking">热门榜单</a>
+      </div>
+      <div class="footer-col">
+        <h4>参考信息</h4>
+        <a href="/#deepdive">政策解读</a>
+        <a href="/#guide">选学指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#news">相关资讯</a>
+      </div>
+      <div class="footer-col">
+        <h4>互动参与</h4>
+        <a href="/#comments">学员留言</a>
+        <a href="/#interact">案例投稿</a>
+        <a href="/#recommend">延伸学习</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>内容为示例条目，课程数据与日期基于2026年11月8日整理。</span>
+      <span>页面更新：2026-11-08</span>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="回到顶部">↑</button>
+
+  <script>
+    (function() {
+      // 移动端菜单
+      const hamburger = document.getElementById('hamburgerBtn');
+      const mainNav = document.getElementById('mainNav');
+      const overlay = document.getElementById('navOverlay');
+
+      function closeMenu() {
+        mainNav.classList.remove('open');
+        overlay.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.textContent = '☰';
+      }
+
+      function openMenu() {
+        mainNav.classList.add('open');
+        overlay.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+        hamburger.textContent = '✕';
+      }
+
+      hamburger.addEventListener('click', function() {
+        if (mainNav.classList.contains('open')) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+      overlay.addEventListener('click', closeMenu);
+
+      mainNav.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (window.innerWidth <= 740) closeMenu();
+        });
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mainNav.classList.contains('open')) closeMenu();
+      });
+
+      // 回到顶部
+      const backTop = document.getElementById('backTop');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 400) {
+          backTop.classList.add('visible');
+        } else {
+          backTop.classList.remove('visible');
+        }
+      });
+      backTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // 搜索过滤（简单匹配标题和描述）
+      const searchInput = document.getElementById('searchInput');
+      const searchBtn = document.getElementById('searchBtn');
+
+      function performSearch() {
+        const q = searchInput.value.trim().toLowerCase();
+        if (!q) return;
+        const sections = document.querySelectorAll('.main-content section');
+        let found = false;
+        sections.forEach(function(sec) {
+          const text = sec.textContent.toLowerCase();
+          if (text.includes(q)) {
+            found = true;
+            sec.style.display = '';
+          } else {
+            sec.style.display = 'none';
+          }
+        });
+        if (!found) {
+          alert('未找到与“' + searchInput.value.trim() + '”相关的内容，请尝试其他关键词。');
+          sections.forEach(function(sec) { sec.style.display = ''; });
+        }
+      }
+
+      searchBtn.addEventListener('click', performSearch);
+      searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          performSearch();
+        }
+      });
+
+      // 频道导航高亮
+      const channelLinks = document.querySelectorAll('.channel-nav a');
+      const sections = document.querySelectorAll('.main-content section[id]');
+      
+      function highlightNav() {
+        let current = '';
+        sections.forEach(function(sec) {
+          const top = sec.offsetTop - 140;
+          if (window.scrollY >= top) {
+            current = sec.getAttribute('id');
+          }
+        });
+        channelLinks.forEach(function(link) {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '/#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+      window.addEventListener('scroll', highlightNav);
+      highlightNav();
+    })();
+  </script>
+
+  <!-- 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "内蒙古干部网络学院官网",
+    "description": "干部在线学习课程、专题班次与政策解读平台",
+    "inLanguage": "zh-CN"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "处级干部进修班线上课程最少要完成多少学时？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "2026年秋季学期要求32学时，其中必修24学时、选修8学时。必修部分由“二十届三中全会精神解读”（8学时）、“铸牢中华民族共同体意识”（6学时）、“党性修养与廉政建设”（6学时）及“专业化能力”（4学时）构成。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "“铸牢中华民族共同体意识”专题班的6个案例分别讲哪里？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "6个案例分别取自呼和浩特市玉泉区清泉街社区、呼伦贝尔市鄂温克族自治旗、阿拉善盟额济纳旗东风镇、兴安盟科尔沁右翼前旗、锡林郭勒盟苏尼特右旗、乌海市海勃湾区。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "库布其光伏治沙案例课的数据截止到什么时候？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "课程页面标注“数据截至2025年12月”。发电量与植被覆盖率数据来自达拉特旗能源局2025年度报表。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "线上研讨缺席会影响结业吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "“办好两件大事”专题课的研讨参与度占总评20%。缺席单次不扣分，但整期缺席超过3次（共6次）该项计零分。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "苏木乡镇履职事项清单微课在哪几集讲林长制？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "第7集专门讲林长制在苏木乡镇的职责承接，时长14分钟。第8集讲河湖长制。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "在线考试的案例分析题怎么评分？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "评分分三档：第一档准确引用课程中的具体数据或政策条款；第二档有分析框架但数据引用少于2处；第三档仅复述政策原则。"
+        }
+      }
+    ]
+  }
+  </script>
+
+</body>
+                                     </html>
